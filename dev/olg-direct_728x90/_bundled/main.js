@@ -16,10 +16,10 @@ gsap.defaults({
 
 var READ = {
 	t1: 3.5,
-	t2a: 2.8,
-	t2b: 2.3
+	t2a: 2.8
 };
 
+// t2b: 2.3,
 var w = size.w;
 var h = size.h;
 
@@ -89,11 +89,11 @@ function hand() {
 	tl.from(".hand", _extends({ duration: .3 }, obj), 0);
 	tl.from(".t2a", { duration: .4, x: "-=" + size.w }, 0);
 	tl.to(".t2a", { duration: .3, opacity: 0, x: "+=100" }, "+=" + READ.t2a);
-	tl.from(".t2b", { duration: .4, opacity: 0, x: "-=100" });
+	// tl.from(".t2b", {duration:.4, opacity:0, x:"-=100"})
 
-	tl.add("t2", "+=" + READ.t2b);
-	tl.to(".t2b", _extends({ duration: .45, opacity: 0 }, obj), "t2");
-	tl.to(".hand", _extends({ duration: .35, opacity: 0 }, obj), "t2");
+	// tl.add("t2", `+=${READ.t2b}`)
+	// tl.to(".t2b", {duration:.45, opacity:0, ...obj}, "t2")
+	tl.to(".hand", _extends({ duration: .3, opacity: 0 }, obj));
 	return tl;
 }
 
