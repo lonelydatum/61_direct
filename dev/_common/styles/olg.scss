@@ -1,0 +1,34 @@
+
+
+#legalBtn:hover ~ #legalContent {
+	opacity: 1;
+	@include pos-scale(0, 0, .5);
+}
+
+#legalContent{
+	
+	@include pos-scale(0, 60, .5);
+	color: white;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	// padding: 10px;
+	font-size: 10px;
+	z-index: 20;
+	opacity: 0;
+	
+	font-weight: normal;
+	line-height: 15px;
+	transition: .2s ease-out;
+	pointer-events: none;
+}
+
+
+#legalBtn{	
+	@include pos(0, 0);
+	opacity: 0;
+	width: 36px;
+	height: 25px;
+	z-index: 11;
+	background-color: red;
+	display: none;
+}
+
